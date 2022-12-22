@@ -4,3 +4,20 @@
 
 [node name="World1" type="Node2D"]
 script = ExtResource("1_v3t0b")
+
+[node name="Background" type="Polygon2D" parent="."]
+position = Vector2(179, -3404)
+scale = Vector2(8.8942, 8.66307)
+color = Color(0.486275, 0.611765, 0.74902, 1)
+antialiased = true
+polygon = PackedVector2Array(46.266, 168.523, 607.574, 173.57, 612, 626, -475, 583, -459, 163)
+
+[node name="Ground" type="Polygon2D" parent="."]
+position = Vector2(8, 93)
+color = Color(0.333333, 0.164706, 0.188235, 1)
+polygon = PackedVector2Array(-886, -140, -924, 436, 1318, 529, 1296, -64, 1072, 139, 695, 156, 233, 148, -289, 89, -543, -119)
+
+[node name="Destructible" type="StaticBody2D" parent="Ground"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground/Destructible"]
+polygon = PackedVector2Array(-882, -137, -929, 425, 1315, 520, 1293, -61, 1080, 136, 692, 156, 231, 148, -290, 89, -548, -121)

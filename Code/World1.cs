@@ -8,7 +8,7 @@ public partial class World1 : Node2D
 	public override void _Ready()
 	{
 		
-		var tank = Tank.New();
+		var tank = Tank.New(TankOptions.Paveken);
 		AddChild(tank);
 		tank.Position = new Vector2(100, 100);
 
